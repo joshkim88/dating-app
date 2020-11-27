@@ -1,25 +1,25 @@
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-  <h5 class="my-0 mr-md-auto font-weight-normal">Dating App</h5>
-  <% if account_signed_in? %>
+<navbar class="navbar d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">
+      <%= link_to "Hinger", "/", class: "text-white mr-2" %>
+    </h5>
+    <% if account_signed_in? %>
 
-    <nav class="my-2 my-md-0 mr-md-3">
-      <%= link_to "Browse", browse_path, class: "text-dark mr-2" %>
-      <%= link_to "My Matches", "#", class: "text-dark mr-2" %>
-      <%= link_to "Settings", "#", class: "text-dark" %>
-    </nav>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <%= link_to "Browse", browse_path, class: "text-white mr-2" %>
+        <%= link_to "My Matches", "#", class: "text-white mr-2" %>
+        <%= link_to "Settings", "#", class: "text-white" %>
+      </nav>
 
-    <%= link_to "Sign Out", destroy_account_session_path, method: :delete, class: "btn btn-outline-primary mr-2" %>
+      <%= link_to "Sign Out", destroy_account_session_path, method: :delete, class: "text-white mr-2" %>
 
-  <% else %>
+    <% else %>
 
-    <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark" href="#">Features</a>
-      <a class="p-2 text-dark" href="#">Support</a>
-      <a class="p-2 text-dark" href="#">Pricing</a>
-    </nav>
-
-    <%= link_to "Sign in", new_account_session_path, class: "btn btn-outline-primary mr-1" %>
-    <%= link_to "Sign up now", new_account_registration_path, class: "btn btn-outline-primary" %>
-
-  <% end %>
-</div>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-white" href="#">Features</a>
+        <a class="p-2 text-white" href="#">Support</a>
+        <a class="p-2 text-white" href="#">Pricing</a>
+        <%= link_to "Sign in", new_account_session_path, class: "p-2 text-white mr-2" %>
+        <%= link_to "Sign up", new_account_registration_path, class: "text-white" %>
+      </nav>
+    <% end %>
+</navbar>

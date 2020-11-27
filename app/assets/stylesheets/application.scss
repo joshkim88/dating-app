@@ -15,3 +15,19 @@
  */
 
 @import 'bootstrap/scss/bootstrap';
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #595b83;
+    color: #f4abc4;
+
+}
+
+.navbar {
+  background-color: #595b83;
+  color: #f4abc4;
+}
