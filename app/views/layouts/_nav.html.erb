@@ -10,16 +10,14 @@
         <%= link_to "Settings", "#", class: "text-white" %>
       </nav>
 
-      <%= link_to "Sign Out", destroy_account_session_path, method: :delete, class: "text-white mr-2" %>
+      <%= link_to "Sign Out", destroy_account_session_path, method: :delete, class: "text-white" %>
 
     <% else %>
 
       <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-white" href="#">Features</a>
-        <a class="p-2 text-white" href="#">Support</a>
-        <a class="p-2 text-white" href="#">Pricing</a>
-        <%= link_to "Sign in", new_account_session_path, class: "p-2 text-white mr-2" %>
-        <%= link_to "Sign up", new_account_registration_path, class: "text-white" %>
+        <a class="p-2 text-white" href="#">About Us</a>
+        <%= link_to "Sign In", new_account_session_path, class: "p-2 text-white mr-2" %>
+        <%= link_to "Sign Up", new_account_registration_path, class: "text-white" %>
       </nav>
     <% end %>
 </navbar>
