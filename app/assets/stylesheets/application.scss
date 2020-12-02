@@ -23,7 +23,8 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/v4-shims';
 
 .footer {
-    position: absolute;
+    position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
     height: 60px;
@@ -36,4 +37,5 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 .navbar {
   background-color: #595b83;
   color: #f4abc4;
+  top: 0;
 }

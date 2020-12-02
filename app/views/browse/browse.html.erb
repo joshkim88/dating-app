@@ -1,12 +1,13 @@
 <ul id="slides">
-  <% @users.each_with_idex do |user, i| %>
-    <div class="slide <%= 'showing' if i == 0%>" data-id="<%= user.id %>">
-      <li><%= user.first_name %></li>
-    </div>
+  <% @users.each_with_index do |user, i| %>
+    <li class="slide <%= 'showing' if i == 0 %>" data-id="<%= user.id %>">
+      <%= image_tag user.images.first, width: "200px" %>
+      <%= user.first_name %>
+    </li>
   <% end %>
 </ul>
 
 <div id="slide-controls">
-  <span id="decline"><i class="fa fa-times-circle fa-2x"></i></span>
-  <span id="approve"><i class="fa fa-heart fa-2x"></i></span>
+  <span id="decline"><i class="fa fa-check"></i></span>
+  <span id="approve"><i class="fa fa-heart"></i></span>
 </div>

@@ -31,6 +31,17 @@
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
+  <div class="input-group">
+    <%= f.label :images %>
+    <%= f.file_field :images, multiple: true %>
+  </div>
+
+  <% if resource.images.attached? %>
+    <% resource.images.each do |image| %>
+      <%= image_tag image, width: "250px" %>
+      <% end %>
+  <% end %>
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
