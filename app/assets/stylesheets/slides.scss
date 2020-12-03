@@ -1,4 +1,4 @@
-#slides{
+#slides {
   position: relative;
   height: 400px;
   padding: 0px;
@@ -6,7 +6,7 @@
   list-style-type: none;
 }
 
-.slide{
+.slide {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -27,12 +27,20 @@
   transition: opacity 1s;
 }
 
-.showing{
+.user-details {
+  position: absolute;
+   bottom: 50px;
+   left: 50%;
+   width: 100px;
+   margin-left: -50px;
+}
+
+.showing {
   opacity: 1;
   z-index: 2;
 }
 
-#slide-controls{
+#slide-controls {
   margin-top: 20px;
   width: 100%;
   text-align: center;
@@ -41,6 +49,15 @@
     margin: 0 10px;
   }
 }
+
+.image-slides{
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 // .slide:nth-of-type(1){
 //   background: red;

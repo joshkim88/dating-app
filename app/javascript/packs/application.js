@@ -11,6 +11,8 @@ require("channels")
 require("bootstrap")
 require("../includes/slides.js")
 require("@fortawesome/fontawesome-free";
+//= require jquery
+//= require jquery_ujs
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

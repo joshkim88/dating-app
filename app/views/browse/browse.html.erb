@@ -1,13 +1,18 @@
 <ul id="slides">
   <% @users.each_with_index do |user, i| %>
     <li class="slide <%= 'showing' if i == 0 %>" data-id="<%= user.id %>">
-      <%= image_tag user.images.first, width: "200px" %>
-      <%= user.first_name %>
+      <div class="image-slides" style="background-image: url('<%= url_for user.images.first %>')">
+      </div>
+      <span class="user-details"><%= user.first_name %></span>
     </li>
   <% end %>
 </ul>
 
 <div id="slide-controls">
-  <span id="decline"><i class="fa fa-check"></i></span>
-  <span id="approve"><i class="fa fa-heart"></i></span>
+  <span class="controls" id="decline"><i class="fa fa-times-circle fa-2x"></i></span>
+  <span class="controls" id="approve"><i class="fa fa-heart fa-2x"></i></span>
 </div>
+
+<% @users.each_with_index do |user, i| %>
+  url('<%= url_for user.images.first %>')
+<% end %>
