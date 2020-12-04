@@ -5,10 +5,12 @@ $(function(){
   // $activeSlide.addClass("showing");
 
   $("#decline").on("click", function(){
+    console.log("decline")
     goToSlide(decline);
   });
 
   $("#approve").on("click", function(){
+    console.log("approve")
     goToSlide(approve);
   });
 
