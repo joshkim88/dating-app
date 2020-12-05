@@ -14,11 +14,8 @@
   height: 100%;
   opacity: 0;
   z-index: 1;
-
-  font-size: 40px;
   // padding: 40px;
   box-sizing: border-box;
-  background: #333;
   color: #fff;
 
   -webkit-transition: opacity 1s;
@@ -31,8 +28,14 @@
   position: absolute;
    bottom: 50px;
    left: 50%;
-   width: 100px;
-   margin-left: -50px;
+   width: 200px;
+   margin-left: -100px;
+   // text-align: center;
+   font-size: 18px;
+}
+
+.user-name {
+  font-size: 28px;
 }
 
 .showing {
