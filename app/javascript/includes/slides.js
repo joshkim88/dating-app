@@ -10,7 +10,18 @@ $(function(){
   });
 
   $("#approve").on("click", function(){
-    console.log("approve")
+    var user_id = $activeSlide.data("id");
+
+    console.log(user_id)
+
+    // console.log("approve")
+
+    $.ajax({
+      url: "/approve/" + user_id,
+      method:"post",
+      dataType: "ajax"
+    });
+
     goToSlide(approve);
   });
 
