@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <% @matches.each do |match| %>
+      <div class="col-sm-4">
+        <% if match.images.attached? %>
+        <%= image_tag match.images.first, class: "img-fluid" %>
+        <% end %>
+      </div>
+
+    <% end %>
+  </div>
+</div>

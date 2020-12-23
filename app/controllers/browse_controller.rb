@@ -7,6 +7,11 @@ class BrowseController < ApplicationController
     @users = Account.where.not(id: liked_account_ids)
   end
 
+  def matches
+    # grab matches for the current user.
+    @matches = current_account.matches
+  end
+
   def approve
     account_id = params[:id]
     # User likes User
