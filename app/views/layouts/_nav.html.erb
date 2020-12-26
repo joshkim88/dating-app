@@ -1,13 +1,13 @@
 <navbar class="navbar d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">
-      <%= link_to "Hinger", "/", class: "text-white mr-2" %>
+      <%= link_to "Hinger", "/", class: "text-black mr-2" %>
     </h5>
     <% if account_signed_in? %>
 
       <nav class="my-2 my-md-0 mr-md-3">
-        <%= link_to "Browse", browse_path, class: "text-white mr-2" %>
-        <%= link_to "My Matches", matches_path, class: "text-white mr-2" %>
-        <%= link_to "Settings", edit_account_registration_path, class: "text-white" %>
+        <%= link_to "Browse", browse_path, class: "text-black mr-2" %>
+        <%= link_to "My Matches", matches_path, class: "text-black mr-2" %>
+        <%= link_to "Settings", edit_account_registration_path, class: "text-black" %>
 
       </nav>
 
@@ -17,9 +17,9 @@
     <% else %>
 
       <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-white" href="#">About Us</a>
-        <%= link_to "Sign In", new_account_session_path, class: "p-2 text-white mr-2" %>
-        <%= link_to "Sign Up", new_account_registration_path, class: "text-white" %>
+        <a class="p-2 text-black" href="#">About Us</a>
+        <%= link_to "Sign In", new_account_session_path, class: "p-2 text-black mr-2" %>
+        <%= link_to "Sign Up", new_account_registration_path, class: "text-black" %>
       </nav>
     <% end %>
 </navbar>
