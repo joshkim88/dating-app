@@ -1,18 +1,43 @@
-<ul id="slides">
-  <% @users.each_with_index do |user, i| %>
-    <li class="slide <%= 'showing' if i == 0 %>" data-id="<%= user.id %>">
-      <div class="image-carousel " style="background-image: url('<%= url_for user.images.first %>')">
+<div class="row">
+  <div class="col-3 col-md-4 bg-white">
+    <ul class="nav nav-pills ml-4 mt-3 mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Matches</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-messages" role="tab" aria-controls="pills-profile" aria-selected="false">DMs</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane ml-2 fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <%= render "browse/matches" %>
       </div>
-      <div class="user-details">
-        <span class="user-name"> <%= user.first_name %></span>, 31<br />
-        <i class="fa fa-graduation-cap mr-1"></i> job/studies<br />
-        <i class="fa fa-map-marker mr-2"></i> location
+      <div class="tab-pane ml-2 fade" id="pills-messages" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="col">
+          <p>You have no messages yet.</p>
+        </div>
       </div>
-    </li>
-  <% end %>
-</ul>
+    </div>
+  </div>
 
-<div id="slide-controls">
-  <span class="controls" id="decline"><i class="fa fa-times-circle fa-2x"></i></span>
-  <span class="controls" id="approve"><i class="fa fa-heart fa-2x"></i></span>
+  <div class="col-9 col-md-8">
+    <ul id="slides">
+      <% @users.each_with_index do |user, i| %>
+        <li class="slide <%= 'showing' if i == 0 %>" data-id="<%= user.id %>">
+          <div class="image-carousel " style="background-image: url('<%= url_for user.images.first %>')">
+          </div>
+          <div class="user-details">
+            <span class="user-name"> <%= user.first_name %></span>, 31<br />
+            <i class="fa fa-graduation-cap mr-1"></i> job/studies<br />
+            <i class="fa fa-map-marker mr-2"></i> location
+          </div>
+        </li>
+      <% end %>
+    </ul>
+
+    <div id="slide-controls">
+      <span class="controls" id="decline"><i class="fa fa-times-circle fa-2x"></i></span>
+      <span class="controls" id="approve"><i class="fa fa-heart fa-2x"></i></span>
+    </div>
+  </div>
 </div>

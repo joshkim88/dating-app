@@ -4,12 +4,8 @@ class BrowseController < ApplicationController
     # browse only accounts that haven't been liked already
     liked_account_ids = Like.where(account_id: current_account.id).map(&:liked_account_id)
     liked_account_ids << current_account.id
-    @users = Account.where.not(id: liked_account_ids)
-  end
-
-  def matches
-    # grab matches for the current user.
     @matches = current_account.matches
+    @users = Account.where.not(id: liked_account_ids)
   end
 
   def approve

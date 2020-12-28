@@ -9,7 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 
 require("bootstrap")
-require("../includes/slides.js")
+require("../includes/browse.js")
 require("@fortawesome/fontawesome-free")
 
 // Uncomment to copy all static images under ../images to the output folder and reference

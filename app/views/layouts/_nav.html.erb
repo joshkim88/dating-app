@@ -1,6 +1,6 @@
-<navbar class="navbar d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom shadow-sm">
+<navbar class="navbar d-flex flex-column flex-md-row align-items-center p-3 px-md-4 border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">
-      <%= link_to "Hinger", "/", class: "text-black mr-2" %>
+      <%= link_to "Dating Social", "/", class: "text-black mr-2" %>
     </h5>
     <% if account_signed_in? %>
 
@@ -11,7 +11,7 @@
 
       </nav>
 
-      <%= link_to "Sign Out", destroy_account_session_path, class: "text-white" %>
+      <%= link_to "Sign Out", destroy_account_session_path, class: "text-black" %>
 
 
     <% else %>
