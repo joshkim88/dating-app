@@ -1,15 +1,25 @@
 <div class="row">
-  <div class="col-3 col-md-4 bg-white">
-    <ul class="nav nav-pills ml-4 mt-3 mb-3" id="pills-tab" role="tablist">
+  <div class="col-md-3 bg-white">
+    <!-- Banner for the left side profile bar -->
+    <div>
+      <%= render "layouts/profile_bar" %>
+    </div>
+
+    <!--    These are the tabs for messages and matches. -->
+    <ul class="nav nav-dating-sidebar ml-4 mt-3 mb-3" id="pills-tab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Matches</a>
+        <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Matches</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-messages" role="tab" aria-controls="pills-profile" aria-selected="false">DMs</a>
       </li>
+
     </ul>
     <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane ml-2 fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      <div class="tab-pane ml-2 fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
         <%= render "browse/matches" %>
       </div>
       <div class="tab-pane ml-2 fade" id="pills-messages" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -17,10 +27,19 @@
           <p>You have no messages yet.</p>
         </div>
       </div>
+      <div class="tab-pane ml-2 fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="col">
+          <p>Your Name</p>
+          <p>Age</p>
+          <p>Bio</p>
+          <p>City</p>
+
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="col-9 col-md-8">
+  <!-- This is the slideshow that shows potential matches. -->
+  <div class="col-9 col-md-9">
     <ul id="slides">
       <% @users.each_with_index do |user, i| %>
         <li class="slide <%= 'showing' if i == 0 %>" data-id="<%= user.id %>">
