@@ -1,0 +1,6 @@
+$("#conversation").html("<%= escape_javascript(render partial: 'browse/conversation') %>").show();
+
+// bind dom element for on click event
+$("#close-conversation").on("click", function(){
+  $("#conversation").hide();
+})

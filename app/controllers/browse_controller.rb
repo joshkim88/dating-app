@@ -26,4 +26,19 @@ class BrowseController < ApplicationController
   def decline
   end
 
+  def conversation
+    id = params[:id]
+    @profile = Account.find(id)
+    likes = Like.where(account_id: current_account.id, liked_account_id: id)
+    @match = likes.first if likes.size > 0
+
+    if @profile.present?
+      respond_to do |format|
+        format.js {
+          render "browse/conversation"
+        }
+      # get conversation entries for this user
+      end
+    end
+  end
 end

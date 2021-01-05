@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/matches" => "browse#matches", as: :matches
   post "/approve/:id" => "browse#approve", as: :approve_user
   post "/decline/:id" => "browse#decline", as: :decline_user
+  post "get/conversation/:id" => "browse#conversation", as: :conversation
 
   root to: "public#home"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

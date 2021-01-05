@@ -29,10 +29,11 @@
       </div>
       <div class="tab-pane ml-2 fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
         <div class="col">
-          <p>Your Name</p>
-          <p>Age</p>
-          <p>Bio</p>
-          <p>City</p>
+
+              <p><%= current_account.first_name %></p>
+              <p>23</p>
+              <p>Queens, NY</p>
+              <p>Insert Drake lyric here.</p>
 
         </div>
       </div>
@@ -58,5 +59,9 @@
       <span class="controls" id="decline"><i class="fa fa-times-circle fa-2x"></i></span>
       <span class="controls" id="approve"><i class="fa fa-heart fa-2x"></i></span>
     </div>
+    <div id="conversation">
+    </div>
   </div>
 </div>
+
+<!-- Here is where we show conversations with our matches. -->
