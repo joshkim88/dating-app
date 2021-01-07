@@ -20,8 +20,17 @@
 
 .profile-thumb {
   border: 2px solid #fff;
+  width: 280px;
+  height: 400px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#home {
-  background-image: url(/assets/background.jpg);
+.my-profile {
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -27,9 +27,9 @@
       </div>
       <div class="tab-pane ml-2 fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
         <div class="col">
-          <div>
+          <div class="my-profile">
             <%= link_to "", class: "d-block text-white" do %>
-              <%= image_tag current_account.images.first, width: "70px", height: "70px", class: "profile-thumb rounded-circle mr-2" %>
+              <%= image_tag current_account.images.first, width: "70px", height: "70px", class: "profile-thumb rounded mr-2" %>
             <% end %>
           </div>
           <p><%= current_account.first_name %></p>
