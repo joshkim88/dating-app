@@ -40,10 +40,13 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
   top: 0;
 }
 
-
-// body {
-//   background-image:url("girlondate.jpeg");
-//   background-repeat: no-repeat;
-//   background-size: cover;
+// .home {
+//   background-image: url("/assets/images/girlondate.jpeg");
 // }
+
+.home {
+  background-image:url("girlondate.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 

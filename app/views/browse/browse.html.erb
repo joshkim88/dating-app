@@ -1,9 +1,7 @@
 <div class="row">
   <div class="col-md-3 bg-white">
     <!-- Banner for the left side profile bar -->
-    <div>
-      <%= render "layouts/profile_bar" %>
-    </div>
+
 
     <!--    These are the tabs for messages and matches. -->
     <ul class="nav nav-dating-sidebar ml-4 mt-3 mb-3" id="pills-tab" role="tablist">
@@ -14,7 +12,7 @@
         <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Matches</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-messages" role="tab" aria-controls="pills-profile" aria-selected="false">DMs</a>
+        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-messages" role="tab" aria-controls="pills-profile" aria-selected="false">Messages</a>
       </li>
 
     </ul>
@@ -29,12 +27,14 @@
       </div>
       <div class="tab-pane ml-2 fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
         <div class="col">
-
-              <p><%= current_account.first_name %></p>
-              <p>23</p>
-              <p>Queens, NY</p>
-              <p>Insert Drake lyric here.</p>
-
+          <div>
+            <%= link_to "", class: "d-block text-white" do %>
+              <%= image_tag current_account.images.first, width: "70px", height: "70px", class: "profile-thumb rounded-circle mr-2" %>
+            <% end %>
+          </div>
+          <p><%= current_account.first_name %></p>
+          <p>23</p>
+          <p>Queens, NY</p>
         </div>
       </div>
     </div>
