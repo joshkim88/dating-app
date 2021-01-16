@@ -44,9 +44,24 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 //   background-image: url("/assets/images/girlondate.jpeg");
 // }
 
-.home {
-  background-image:url("girlondate.jpeg");
-  background-repeat: no-repeat;
+html {
+  background: url(girlondate.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
+
+// .home-container {
+//   background: rgba(255,255,255,0.5);
+
+// }
+
+// body.background {
+
+//   background-repeat: no-repeat;
+//   background-size: cover;
+
+// }
+
 
