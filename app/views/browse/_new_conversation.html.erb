@@ -1,0 +1,14 @@
+<%= form_with model: @conversation do |form| %>
+  <%= form.hidden_field :recipient_id, value: @profile.id %>
+
+  <div class="input-group">
+    <%= form.fields_for :messages, @message do |message_form| %>
+    <%= message_form.hidden_field :account_id, value: current_account.id %>
+    <%= message_form.text_field :body, placeholder: "Enter your message here", class: "form-control form-control-lg" %>
+    <% end %>
+
+    <div class="input-group-append">
+      <input type="submit" name="submit" value="Send" class="btn btn-dark btn-lg pl-5 pr-5">
+    </div>
+  </div>
+<% end %>

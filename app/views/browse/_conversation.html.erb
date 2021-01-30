@@ -7,21 +7,18 @@
   </div>
   <div class="row">
     <div class="col-12 text-center">
-      <p class="mt-3">You matched with <span><%= @profile.first_name %></span> <%= time_ago_in_words @match.created_at %> ago.</p>
-      <%= link_to image_tag(@profile.images.first, width: "400px", height: "400px", class: "relative rounded mt-2 mb-2"), "#" %>
+      <div id="initiate-converation">
+        <p class="mt-3">You matched with <span><%= @profile.first_name %></span> <%= time_ago_in_words @match.created_at %> ago.</p>
+        <%= link_to image_tag(@profile.images.first, width: "400px", height: "400px", class: "relative rounded mt-2 mb-2"), "#" %>
 
-      <p>Send them a message.</p>
+        <p>Send them a message.</p>
+      </div>
+
+      <div id="conversation_messages"></div>
     </div>
   </div>
   <div class="row">
     <div class="col-12 mt-5 botton-bar">
-      <form>
-        <div class="input-group">
-          <input type="text" name="message" value="" placeholder="Type your message here" class="form-control form-control-lg">
-          <div class="input-group-append">
-            <input type="submit" name="send" value="Send" class="btn btn-dark btn-lg pl-5 pr-5">
-          </div>
-        </div>
-      </form>
+      <%= render partial: "browse/new_conversation" %>
     </div>
   </div>
