@@ -40,6 +40,14 @@
     margin-top: 30px;
   }
 
+  .conversation_message {
+    background: #f2f2f2;
+
+    p {
+      margin: 0;
+    }
+  }
+
   #close-conversation {
     cursor: pointer;
 
