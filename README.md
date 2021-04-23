@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple dating application where Users can make a profile, browse other users, like other users, match with other users if they like you back, then send messages to matched users.
 
-Things you may want to cover:
+Ruby version 6.0
 
-* Ruby version
+To run application
 
-* System dependencies
+-clone the dating-app repository
 
-* Configuration
+-cd dating-app
 
-* Database creation
+-rails db:create
 
-* Database initialization
+-rails s
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- go to localhost:3000 in your browser
